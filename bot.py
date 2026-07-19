@@ -128,7 +128,6 @@ async def get_price(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 
 
-    db.commit()
 
 
     admin_text = f"""
@@ -219,7 +218,7 @@ def main():
 
         entry_points=[
             MessageHandler(
-                filters.Regex("📤 ثبت کانال برای فروش"),
+                filters.Regex("^📤 ثبت کانال برای فروش$")
                 register_channel
             )
         ],
